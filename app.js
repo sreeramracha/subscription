@@ -29,10 +29,10 @@ app.post("/",function(req,res){
         ]
     };
     var jsonData=JSON.stringify(data);
-    const url="https://us14.api.mailchimp.com/3.0/lists/5b21c0f131"
+    const url="https://us14.api.mailchimp.com/3.0/lists/"//+ listID
     const options={
         method:"POST",
-        auth:"sreeram:eeb5f7d6b97e0acfbf7870fce5214f2c-us14"
+        auth:"sreeram:" // anyname:apikey
     }
 
     const request=https.request(url,options,function(response){
@@ -64,8 +64,3 @@ app.listen(process.env.PORT || 3000,function(){
     console.log("Server started running at 3000 port");
 })
 
-// API Key
-// eeb5f7d6b97e0acfbf7870fce5214f2c-us14
-
-// List ID
-// 5b21c0f131
